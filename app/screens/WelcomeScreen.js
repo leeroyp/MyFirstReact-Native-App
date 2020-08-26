@@ -7,8 +7,11 @@ export default function WelcomeScreen() {
        style={styles.background}
        source={require("../assets/background.jpg")}
        >
-           <Image style={styles.logo} source={require('../assets/logo-red.png')}/>
-          <Text>Sell What You Don't Need </Text>
+           <View style={styles.logoContainer}>
+            <Image style={styles.logo} source={require('../assets/logo-red.png')}/>
+            <Text>Sell What You Don't Need </Text>
+           </View>
+    
            <View style={styles.loginButton}></View>
            <View style={styles.registerButton}></View>
 
@@ -36,10 +39,11 @@ const styles = StyleSheet.create({
         logo:{
             width:100,
             height:100,
+        },
+        logoContainer:{
             position:"absolute",
-            top:70
-
-
+            top:70 ,
+            alignItems:"center"
         
         }
     
